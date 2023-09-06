@@ -15,6 +15,19 @@ public class DataFormatterTests
         string dateFormateada = TestDateFormat.DateFormatter.ChangeFormat(dateIngresado);
         Assert.AreEqual(dateFormateada, dateExpected);
     }
+
+    [Test]
+
+    public void FechaIncorrecta()
+    {
+        const string dateIngresado = "21052002";
+        const string dateExpected = "2002-05-21";
+        string dateCambiado = TestDateFormat.DateFormatter.ChangeFormat(dateIngresado);
+        Assert.AreNotEqual(dateCambiado, dateExpected);
+    }
+
+    
+
 }
 
 
