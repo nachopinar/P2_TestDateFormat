@@ -26,8 +26,16 @@ public class DataFormatterTests
         Assert.AreNotEqual(dateCambiado, dateExpected);
     }
 
-    
+    [Test]
 
+    public void FechaVacia()
+    {
+        const string dateIngresado = "";
+        //const string dateExpected = "no esto";
+        //Assert.Throws<Exception> (() => TestDateFormat.DateFormatter.ChangeFormat(dateIngresado));
+        //aca lo corro y veo que exception me tira 
+        Assert.Throws<ArgumentOutOfRangeException> (() => TestDateFormat.DateFormatter.ChangeFormat(dateIngresado));
+    }
 }
 
 
