@@ -14,7 +14,12 @@ public class DateFormatter
     /// <param name="date">Una fecha en formato "dd/mm/yyyy".</param>
     /// <returns>La fecha convertida al formato "yyyy-mm-dd".</returns>
     public static string ChangeFormat(string date)
-    {
+    {   
+        if (String.IsNullOrEmpty(date))
+        {
+            return "";
+        }
+        //if (dateformato no ta correcto -> writln formato incorrecto)
         return date.Substring(6) + "-" + date.Substring(3, 2) + "-" + date.Substring(0, 2);
     }
 }
