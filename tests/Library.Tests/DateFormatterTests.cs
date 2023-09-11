@@ -35,10 +35,21 @@ public class DataFormatterTests
         //Assert.Throws<Exception> (() => TestDateFormat.DateFormatter.ChangeFormat(dateIngresado));
         //aca lo corro y veo que exception me tira 
         //Assert.Throws<Exception> (() => TestDateFormat.DateFormatter.ChangeFormat(dateIngresado));
-        Assert.That((String.IsNullOrEmpty(dateIngresado)));
+        Assert.That((String.IsNullOrEmpty(dateIngresado))); //OJO CON ESTO ENTONCES.
     }
 }
 
+//public TestDateLength(), aca me valida, incluso si la fecha es vacia.
+//public SeparatorsAreValid(), chequea que en las posiciones correspondientes esta la /
+
+//el anterior incluso sirve para casos en los que tenga - en vez de / como separador.
+
+//public ComponentsAreValid(), verifica dia entre 1-31 y  mes entre 1-12
+
+/*tenemos que devolver el string vacio en vez de un mensaje de error, por que tengo que 
+escribir lo mismo en cada test, y cualquier cambio en el string que devuelvo ya no me sirve
+para seguir usandolo. Podemos usar excepciones.
+*/
 
 
 
